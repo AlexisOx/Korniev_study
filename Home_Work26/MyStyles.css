@@ -1,0 +1,42 @@
+#check1 {
+    color: brown;
+    font-size: 200%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+
+  }
+#check2 {
+    color: rgba(73, 31, 224, 0.623);
+    font-size: 200%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+  }
+
+  #check3 {
+    color: rgba(13, 180, 41, 0.856);
+    font-size: 200%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+  }
+
+#check4 {
+    color: rgba(221, 13, 204, 0.973);
+    font-size: 150%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+  }
+
+#check5 {
+    font-size: 130%;
+    padding-left: 5%;
+    
+  }
+
+#check6 {
+    text-align: center;
+    border-bottom: 4px solid rgba(23, 8, 163, 0.973);
+  }
+
+#check7 {
+    background-color: lightblue;
+  }
