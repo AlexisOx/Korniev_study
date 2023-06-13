@@ -1,0 +1,229 @@
+{
+	"id": "36c323d8-0bd6-4c93-b8ad-ab1a15387a42",
+	"name": "API tests for the hillelAuto application",
+	"timestamp": "2023-06-13T20:09:26.845Z",
+	"collection_id": "27189706-656f0550-39fe-40f0-92f1-dfb0414fd22c",
+	"folder_id": 0,
+	"environment_id": "27189706-f0e40fa2-22dc-4d22-ab04-d27ef891c07c",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-06-13T20:09:21.836Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "cf5e576f-bd4a-4862-846e-1f866f537156",
+			"name": "Sign up (Create user)",
+			"url": "https://qauto2.forstudy.space/api/auth/signup",
+			"time": 667,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				667
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "20e8f7ed-2637-4789-b993-95154ab8ec0e",
+			"name": "Sign in",
+			"url": "https://qauto2.forstudy.space/api/auth/signin",
+			"time": 598,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 304": false
+			},
+			"testPassFailCounts": {
+				"Status code is 304": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				598
+			],
+			"allTests": [
+				{
+					"Status code is 304": false
+				}
+			]
+		},
+		{
+			"id": "471ad94f-52f5-4534-a034-c974d25fc8e1",
+			"name": "Change his name and surname",
+			"url": "https://qauto2.forstudy.space/api/users/profile",
+			"time": 68,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				68
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "bd4b9ed2-1977-4a76-9c85-499047931da6",
+			"name": "Change its distance to ml",
+			"url": "https://qauto2.forstudy.space/api/users/settings",
+			"time": 95,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				95
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0c5a5bb9-a8a3-4cef-a650-bc429c028528",
+			"name": "Add a car (any) to the user",
+			"url": "https://qauto2.forstudy.space/api/cars",
+			"time": 76,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				76
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b11451b2-a64b-44fa-b1bb-d2c8df00362d",
+			"name": "Change his mileage",
+			"url": "https://qauto2.forstudy.space/api/",
+			"time": 61,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				61
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "35344a86-1a62-494f-a86f-e5b95b7aaddd",
+			"name": "Add costs to the car",
+			"url": "https://qauto2.forstudy.space/api/expenses",
+			"time": 80,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				80
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e99a142d-aced-41de-b889-766ac29879fd",
+			"name": "Delete car",
+			"url": "https://qauto2.forstudy.space/api/cars/98015",
+			"time": 64,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				64
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7f5b66f5-9500-45af-8710-8e49d2c3630b",
+			"name": "Delete user",
+			"url": "https://qauto2.forstudy.space/api/users",
+			"time": 80,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				80
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1789,
+	"collection": {
+		"requests": [
+			{
+				"id": "cf5e576f-bd4a-4862-846e-1f866f537156",
+				"method": "POST"
+			},
+			{
+				"id": "20e8f7ed-2637-4789-b993-95154ab8ec0e",
+				"method": "POST"
+			},
+			{
+				"id": "471ad94f-52f5-4534-a034-c974d25fc8e1",
+				"method": "PUT"
+			},
+			{
+				"id": "bd4b9ed2-1977-4a76-9c85-499047931da6",
+				"method": "GET"
+			},
+			{
+				"id": "0c5a5bb9-a8a3-4cef-a650-bc429c028528",
+				"method": "POST"
+			},
+			{
+				"id": "b11451b2-a64b-44fa-b1bb-d2c8df00362d",
+				"method": "PUT"
+			},
+			{
+				"id": "35344a86-1a62-494f-a86f-e5b95b7aaddd",
+				"method": "GET"
+			},
+			{
+				"id": "e99a142d-aced-41de-b889-766ac29879fd",
+				"method": "DELETE"
+			},
+			{
+				"id": "7f5b66f5-9500-45af-8710-8e49d2c3630b",
+				"method": "DELETE"
+			}
+		]
+	}
+}
