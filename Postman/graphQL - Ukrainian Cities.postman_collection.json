@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "fc7fe144-2054-4be5-a99e-695d77f576c7",
+		"name": "graphQL - Ukrainian Cities",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27189706"
+	},
+	"item": [
+		{
+			"name": "GetAllCities",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n  getAllCities{\r\n    id\r\n    name\r\n    square\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{URL_}}",
+					"host": [
+						"{{URL_}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCityById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n  getCityById(id:2){\r\n    id\r\n    name\r\n    square\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{URL_}}",
+					"host": [
+						"{{URL_}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCityByRangeId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n  getCityByRangeId(filter:{minId:4, maxId:7}){\r\n    id\r\n    name\r\n    square\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{URL_}}",
+					"host": [
+						"{{URL_}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Description Of Kyiv and Lviv",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n  city1:getCityDescription(id:7)\r\n  city2:getCityDescription(id:11) \r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{URL_}}",
+					"host": [
+						"{{URL_}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Each time a different city",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  addCity(name: \"Лондон\", square: 1572, description: \"У Лондоні відкрився найперший у світі зоопарк. Сталася ця знаменна подія в далекому 1828 році.\") {\r\n    id\r\n    name\r\n    square\r\n    ... on City {\r\n      description\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{URL_}}",
+					"host": [
+						"{{URL_}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation{\r\n \tupdateCity(id:5,name:\"Лондон\",square:1572,description:\"У Лондоні відкрився найперший у світі зоопарк. Сталася ця знаменна подія в далекому 1828 році.\"){\r\n     id\r\n    name\r\n    square\r\n    ... on City{\r\n      description\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{URL_}}",
+					"host": [
+						"{{URL_}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  deleteCity(id: 5)\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{URL_}}",
+					"host": [
+						"{{URL_}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
