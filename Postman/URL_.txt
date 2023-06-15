@@ -1,0 +1,1 @@
+https://graphql-ukrainian-cities.hillel.it/graphql
