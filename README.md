@@ -1,1 +1,0 @@
-# Korniev_study
